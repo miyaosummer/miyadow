@@ -1,0 +1,24 @@
+<%= form_with(model: @post, local: true) do |form| %>
+  <div class="form-group">
+
+    <!-- ここから編集する -->
+    <%= form.text_field :title, placeholder: "タイトル" %>
+    <!-- ここまで編集する -->
+
+  </div>
+  <div class="form-group">
+
+    <!-- ここから編集する -->
+    <%= form.text_area :body, placeholder: "動画の説明" %>
+    <!-- ここまで編集する -->
+
+  </div>
+  <div class="form-group">
+
+    <!-- ここから編集する -->
+    <%= form.file_field :video %>
+    <!-- ここまで編集する -->
+
+  </div>
+  <%= form.submit class: "btn btn-primary"%>
+<% end %>

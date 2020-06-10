@@ -12,13 +12,11 @@ $(function () {
 				animation.hide();
 			}
 		});
-		// リスト表示
 		$('<li id="list_item" class="list-group-item list-group-item-light" color:black">' + comment + '</li>').prependTo('#list');
 		$("#comment_text").val("");
 	});
 });
 
-// コメントの場所を指定
 function setPosition(id) {
 	var top = $('#nicoscreen').offset();
 	var itemHeight = $(id).height();

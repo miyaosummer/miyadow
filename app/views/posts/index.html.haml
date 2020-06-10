@@ -1,0 +1,10 @@
+%p#notice= notice
+%ul.list-unstyled
+  - @posts.each do |post|
+    %li.media
+      = link_to post_path(post) do
+        = video_tag post.video.to_s, :size => "360x200"
+      .media-body
+        = link_to post_path(post) do
+          %h5.mt-0.mb-1= post.title
+        = post.body

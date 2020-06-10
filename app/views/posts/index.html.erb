@@ -3,21 +3,17 @@
   <% @posts.each do |post| %>
     <li class="media">
 
-      <!-- この行を追加 -->
       <%= link_to post_path(post) do %>
 
         <%= video_tag post.video.to_s, :size => "360x200" %>
 
-      <!-- この行を追加 -->
       <% end %>
 
       <div class="media-body">
       
-        <!-- この行を追加 -->
         <%= link_to post_path(post) do %>
           <h5 class="mt-0 mb-1"><%= post.title %></h5>
 
-        <!-- この行を追加 -->
         <% end %>
 
         <%= post.body %>
@@ -25,4 +21,3 @@
     </li>
   <% end %>
 </ul>
-<%= link_to "仮のボタンです", "#", class: "btn btn-primary" %>
